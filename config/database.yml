@@ -24,6 +24,7 @@ default: &default
   username: railsdevuser
   password: password
 
+
 development:
   <<: *default
   database: DevCampPortfolio_development
