@@ -5,4 +5,5 @@
   <p> <%= @portfolio.body %> </p>
 
   <%= link_to "edit", edit_portfolio_path(@portfolio) %>
+  <%= link_to "destroy", portfolio_path(@portfolio), method: :delete, data: { confirm: "are you sure" } %>
   <%= link_to "all portfolios", portfolios_path %>
