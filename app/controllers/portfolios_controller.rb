@@ -1,11 +1,14 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:edit, :update]
+  before_action :set_portfolio, only: [:edit, :update, :show]
   def index
     @portfolio_items = Portfolio.all
   end
 
   def new
     @portfolio = Portfolio.new
+  end
+
+  def show
   end
 
   def create
