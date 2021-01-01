@@ -12,6 +12,7 @@
     title: "Topic #{topic}"
   )
 end
+puts "Topics created"
 
 10.times do |blog|
   Blog.create!(
@@ -40,10 +41,21 @@ puts "skills created"
   )
 end
 
-  Portfolio.create!(
-    title: "angular js 0" ,
-    subtitle: "angular",
-    body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
-    main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200"
+Portfolio.create!(
+  title: "angular js 0" ,
+  subtitle: "angular",
+  body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+  main_image: "https://via.placeholder.com/600x400",
+  thumb_image: "https://via.placeholder.com/350x200"
+)
+
+puts "portfolios created"
+
+4.times do |technology|
+  Technology.create(
+    :name => "Technology #{technology}",
+    :portfolio_id => (rand(9) + 1)
   )
+end
+
+puts "Technologies created"
