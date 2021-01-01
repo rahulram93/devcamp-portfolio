@@ -7,11 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
+4.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
 
 10.times do |blog|
   Blog.create!(
     title: "my blog post #{blog + 1}",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    topic_id: rand(3) + 1
   )
 end
 puts "blog posts created"
@@ -24,12 +30,20 @@ puts "blog posts created"
 end
 puts "skills created"
 
-9.times do |portfolio_items|
+8.times do |portfolio_items|
   Portfolio.create!(
-    title: "Portfolio title #{portfolio_items}" ,
-    subtitle: "great service",
+    title: "Ruby on rails #{portfolio_items}" ,
+    subtitle: "ruby on rails",
     body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200"
   )
 end
+
+  Portfolio.create!(
+    title: "angular js 0" ,
+    subtitle: "angular",
+    body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+    main_image: "https://via.placeholder.com/600x400",
+    thumb_image: "https://via.placeholder.com/350x200"
+  )
