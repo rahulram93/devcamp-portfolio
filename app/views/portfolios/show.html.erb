@@ -4,6 +4,12 @@
   <em> <%= @portfolio.subtitle %> </em>
   <p> <%= @portfolio.body %> </p>
 
+<h2> Technologies used </h2>
+<% @portfolio.technologies.each do |t| %>
+  <span> <%= t.name %> </span>
+<% end %>
+<br/>
+
   <%= link_to "edit", edit_portfolio_path(@portfolio) %>
   <%= link_to "destroy", portfolio_path(@portfolio), method: :delete, data: { confirm: "are you sure" } %>
   <%= link_to "all portfolios", portfolios_path %>
