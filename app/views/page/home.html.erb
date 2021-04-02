@@ -6,4 +6,7 @@
 <%= @blogs.inspect %>
 
 <h2> Skill posts </h2>
-<%= @skills.inspect %>
+
+<% if session[:source] %>
+  Thank You for visiting from <%= session[:source] %>
+<% end %>
